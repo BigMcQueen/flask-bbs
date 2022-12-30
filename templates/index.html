@@ -15,15 +15,28 @@
 </div>
 {% endfor %}
 
-<div class="mx-auto" style="width: 200px;">
-    <form action="/" method="POST">
+<form action="/" method="POST" class="text-center">
+    <div class="mb-2">
         <label for="username" class="form-label mt-3">名前（省略可）</label>
-        <input style="width:300px;" type="text" name="username" class="form-control">
+        <input style="width:20%;" type="text" name="username" class="form-control mx-auto" placeholder="名無し">
+    </div>
+    <div class="mb-2">
         <label for="email" class="form-label mt-3">メールアドレス（省略可）</label>
-        <input style="width:300px;" type="text" name="email" class="form-control" placeholder="name@example.com">
+        <input style="width:20%;" type="text" name="email" class="form-control mx-auto" placeholder="name@example.com">
+    </div>
+    <div>
         <label for="write" class="form-label mt-4">コメント内容（200字以内）</label>
-        <textarea style="width:300px;" type="text" name="write" class="form-control"></textarea>
-        <input type="submit" value="書き込む" class="btn btn-primary mt-5">
-    </form>
+        <textarea style="width:40%; height:100px" type="text" name="write" class="form-control mx-auto"></textarea>
+    </div>
+    <input type="submit" value="書き込む" class="btn btn-primary mt-2 mb-5 mx-auto">
+</form>
+
+{% endblock %}
+
+{% block footer %}
+<div class="mx-auto" style="width: 200px;">
+    <p style="line-height:3px"><small>TEL: 01-2345-6789</small></p>
+    <p style="line-height:3px"><small>sample@exsample.com</small> </p>
+    <p style="line-height:3px"><small>&copy;Eq1HXGXF</small></p>
 </div>
 {% endblock %}
