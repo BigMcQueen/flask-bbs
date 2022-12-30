@@ -1,6 +1,6 @@
 # flask-bbs
 ## dbの作成方法
-ターミナルでpython3を開く
+- ターミナルでpython3を開く
 - from app import app
 - from app import db
 - with app.app_context():
