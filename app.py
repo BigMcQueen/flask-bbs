@@ -26,7 +26,7 @@ def index():
         return render_template('index.html', posts=posts)
     else: 
         if len(request.form.get('username')) == 0:
-            username = '名無し'
+            username = '(´·ω·`)'
         else:
             username = request.form.get('username')
         email = request.form.get('email')
