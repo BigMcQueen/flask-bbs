@@ -9,4 +9,4 @@
 - exit()
 - python3から抜ける
 ## 見本
-![ScreenShot 2022-12-31 0 07 16](https://user-images.githubusercontent.com/86920995/210084802-c5b3055b-9586-4246-8fc2-de6e02bbfcfa.JPG)
+![ScreenShot 2022-12-31 0 18 39](https://user-images.githubusercontent.com/86920995/210085814-7cf3304b-7d0b-43d9-8250-46369d564254.JPG)
