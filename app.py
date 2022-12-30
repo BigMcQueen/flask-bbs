@@ -26,7 +26,7 @@ def index():
         return render_template('index.html', posts=posts)
     else: 
         if len(request.form.get('username')) == 0:
-            username = '(´·ω·`)'
+            username = '名無し'
         else:
             username = request.form.get('username')
         email = request.form.get('email')
@@ -37,10 +37,6 @@ def index():
         db.session.add(new_post)
         db.session.commit()
         return redirect('/')
-
-@app.route('/create')
-def create():
-    return render_template('create.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

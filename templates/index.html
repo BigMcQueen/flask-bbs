@@ -3,14 +3,14 @@
 {% block body %}
 <h1>掲示板</h1>
 {% for post in posts %}
-<div>
+<div class="contributor-info">
     <p>{{ loop.index }}</p>
     <p>名前: {{ post.username }}</p>
     <p>投稿日時: {{ post.created_at }}</p>
 </div>
 
-<div>
-    <p>コメント内容: {{ post.write }}</p>
+<div class="read-comment">
+    <p>{{ post.write }}</p>
 </div>
 {% endfor %}
 
@@ -21,7 +21,7 @@
         <label for="email">メールアドレス（省略可）</label>
         <input type="text" name="email">
         <label for="write">コメント内容（200字以内）</label>
-        <input type="text" name="write">
+        <textarea type="text" name="write" cols="30" rows="10"></textarea>
         <input type="submit" value="書き込む">
     </form>
 </div>
