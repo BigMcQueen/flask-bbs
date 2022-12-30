@@ -17,7 +17,7 @@ class User(db.Model):
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now(timezone('Asia/Tokyo')))
     username = db.Column(db.String(20))
     email = db.Column(db.String)
-    write = db.Column(db.String(200))
+    write = db.Column(db.String(200), nullable=False)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -27,10 +27,15 @@ def index():
     else: 
         if len(request.form.get('username')) == 0:
             username = '名無し'
+        elif len(request.form.get('username')) > 20:
+            return render_template('redo.html')
         else:
             username = request.form.get('username')
         email = request.form.get('email')
-        write = request.form.get('write')
+        if (len(request.form.get('write')) == 0) | (len(request.form.get('write')) > 200):
+            return render_template('redo.html')
+        else:
+            write = request.form.get('write')
 
         new_post = User(username=username, email=email, write=write)
 
