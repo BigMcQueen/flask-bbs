@@ -1,28 +1,29 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h1>掲示板</h1>
-{% for post in posts %}
-<div class="contributor-info">
-    <p>{{ loop.index }}</p>
-    <p>名前: {{ post.username }}</p>
-    <p>投稿日時: {{ post.created_at }}</p>
+<div class="m-5">
+    <h1>掲示板</h1>
 </div>
-
-<div class="read-comment">
+{% for post in posts %}
+<div class="mx-5 mb-5">
+    <div class="form-inline">
+        <p class="mr-2">{{ loop.index }}</p>
+        <p class="mr-2">名前: {{ post.username }}</p>
+        <p class="mr-2">投稿日時: {{ post.created_at }}</p>
+    </div>
     <p>{{ post.write }}</p>
 </div>
 {% endfor %}
 
-<div class="form">
+<div class="mx-auto" style="width: 200px;">
     <form action="/" method="POST">
-        <label for="username">名前（省略可）</label>
-        <input type="text" name="username">
-        <label for="email">メールアドレス（省略可）</label>
-        <input type="text" name="email">
-        <label for="write">コメント内容（200字以内）</label>
-        <textarea type="text" name="write" cols="30" rows="10"></textarea>
-        <input type="submit" value="書き込む">
+        <label for="username" class="form-label mt-3">名前（省略可）</label>
+        <input style="width:300px;" type="text" name="username" class="form-control">
+        <label for="email" class="form-label mt-3">メールアドレス（省略可）</label>
+        <input style="width:300px;" type="text" name="email" class="form-control" placeholder="name@example.com">
+        <label for="write" class="form-label mt-4">コメント内容（200字以内）</label>
+        <textarea style="width:300px;" type="text" name="write" class="form-control"></textarea>
+        <input type="submit" value="書き込む" class="btn btn-primary mt-5">
     </form>
 </div>
 {% endblock %}
