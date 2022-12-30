@@ -2,5 +2,16 @@
 
 {% block body %}
 <h1>掲示板</h1>
-<p>これはサンプルページです!</p>
+{% for post in posts %}
+<div>
+    <p>{{ loop.index }}</p>
+    <p>名前: {{ post.username }}</p>
+    <p>投稿日時: {{ post.created_at }}</p>
+    <p>ID: {{ post.id }}</p>
+</div>
+
+<div>
+    <p>コメント内容: {{ post.write }}</p>
+</div>
+{% endfor %}
 {% endblock %}

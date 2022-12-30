@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="form">
+    <form action="/" method="POST">
+        <label for="username">名前（省略可）</label>
+        <input type="text" name="username">
+        <label for="email">メールアドレス（省略可）</label>
+        <input type="text" name="email">
+        <label for="write">コメント内容（200字以内）</label>
+        <input type="text" name="write">
+        <input type="submit" value="書き込む">
+    </form>
+</div>
+{% endblock %}
