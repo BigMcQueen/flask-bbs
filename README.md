@@ -5,6 +5,6 @@
 - from app import db
 - with app.app_context():
 	  db.create_all()
-instanceフォルダが作成され、その中にproject.dbがあることを確認する
+- instanceフォルダが作成され、その中にproject.dbがあることを確認する
 - exit()
-python3から抜ける
+- python3から抜ける
