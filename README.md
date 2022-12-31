@@ -17,4 +17,4 @@ SQLite
 python3から抜ける　　
 
 ## 見本
-![ScreenShot 2022-12-31 0 18 39](https://user-images.githubusercontent.com/86920995/210085814-7cf3304b-7d0b-43d9-8250-46369d564254.JPG)
+![ScreenShot 2022-12-31 0 18 39](https://user-images.githubusercontent.com/86920995/210122608-a09507a6-92c3-4592-b80f-e900931ea4d4.JPG)
