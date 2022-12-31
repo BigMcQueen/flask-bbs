@@ -5,7 +5,7 @@ Macbook Air(M1, 2020)
 
 ## dbの作成方法
 ターミナルでpython3を開く　　
-from app import app　　
+from app import app　　\n
 from app import db　　
 with app.app_context():　　
     db.create_all()　　
