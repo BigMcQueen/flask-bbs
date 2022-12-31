@@ -1,8 +1,8 @@
 # flask-bbs
 ## 使用機器
-
 Macbook Air(M1, 2020)
-
+## 開発環境
+venv(python:3.9.6)
 ## dbの作成方法
 ターミナルでpython3を開く　　
 - from app import app　
