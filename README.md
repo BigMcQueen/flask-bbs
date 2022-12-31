@@ -1,4 +1,4 @@
-# flask-bbs
+# Flaskを使った掲示板
 ## 使用機器
 Macbook Air(M1, 2020)
 ## 開発環境
