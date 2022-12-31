@@ -3,6 +3,8 @@
 Macbook Air(M1, 2020)
 ## 開発環境
 venv(python:3.9.6)
+<br>
+SQLite
 ## dbの作成方法
 ターミナルでpython3を開く　　
 <br>
