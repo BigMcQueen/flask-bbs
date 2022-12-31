@@ -32,7 +32,7 @@ def index():
         else:
             username = request.form.get('username')
         email = request.form.get('email')
-        if (len(request.form.get('write')) == 0) | (len(request.form.get('write')) > 200):
+        if (len(request.form.get('write')) == 0) or (len(request.form.get('write')) > 200):
             return render_template('redo.html')
         else:
             write = request.form.get('write')
