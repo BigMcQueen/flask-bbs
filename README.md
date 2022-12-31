@@ -10,7 +10,7 @@ venv(python:3.9.6)
 - with app.app_context():   db.create_all()　　
 - instanceフォルダが作成され、その中にproject.dbがあることを確認する　　
 - exit()　
-- python3から抜ける　　
+python3から抜ける　　
 
 ## 見本
 ![ScreenShot 2022-12-31 0 18 39](https://user-images.githubusercontent.com/86920995/210085814-7cf3304b-7d0b-43d9-8250-46369d564254.JPG)
