@@ -5,12 +5,18 @@ Macbook Air(M1, 2020)
 
 ## dbの作成方法
 ターミナルでpython3を開く　　
-from app import app　　\n
+from app import app　
+<br>
 from app import db　　
+<br>
 with app.app_context():　　
+<br>
     db.create_all()　　
+<br>
 instanceフォルダが作成され、その中にproject.dbがあることを確認する　　
-exit()　　
+<br>
+exit()　
+<br>
 python3から抜ける　　
 
 ## 見本
