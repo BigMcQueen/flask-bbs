@@ -21,27 +21,32 @@ class User(db.Model):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if request.method == 'GET':
-        posts = User.query.all()
-        return render_template('index.html', posts=posts)
-    else: 
-        if len(request.form.get('username')) == 0:
-            username = '名無し'
-        elif len(request.form.get('username')) > 20:
-            return render_template('redo.html')
+        if request.method == 'GET':
+            posts = User.query.all()
+            return render_template('index.html', posts=posts)
         else:
-            username = request.form.get('username')
-        email = request.form.get('email')
-        if (len(request.form.get('write')) == 0) or (len(request.form.get('write')) > 200):
-            return render_template('redo.html')
-        else:
-            write = request.form.get('write')
+            if len(request.form.get('username')) == 0:
+                username = '名無し'
+            elif len(request.form.get('username')) > 20:
+                return render_template('redo.html')
+            else:
+                username = request.form.get('username')
+            email = request.form.get('email')
+            if (len(request.form.get('write')) == 0) or (len(request.form.get('write')) > 200):
+                return render_template('redo.html')
+            else:
+                write = request.form.get('write')
 
-        new_post = User(username=username, email=email, write=write)
+            new_post = User(username=username, email=email, write=write)
 
-        db.session.add(new_post)
-        db.session.commit()
-        return redirect('/')
+            db.session.add(new_post)
+            db.session.flush()
+            id = [row['id'] for row in db.session.execute("SELECT last_insert_rowid() as id")][0]
+            if int(id) < 101:
+                db.session.commit()
+                return redirect('/')
+            else:
+                return 'これ以上コメントできません'
 
 if __name__ == '__main__':
     app.run()
